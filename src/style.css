@@ -485,6 +485,11 @@ img.slider-icon {
   transform: rotate(70deg);
 }
 
+
+.fashion {
+  position: relative;
+}
+
 .fashion-bg {
   background: url('/src/assets/fashion-show.png') center calc(-10px) no-repeat;
   background-size: cover;
