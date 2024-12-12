@@ -810,8 +810,8 @@ img.slider-icon {
 
   .hero-2 {
     background: #020305 image-set(
-            url('/src/assets/webp/hero.webp') type("image/webp"),
-            url('/src/assets/hero.png') type("image/png")
+            url('/src/assets/webp/fashion-show-desktop.webp') type("image/webp"),
+            url('/src/assets/fashion-show-desktop.png') type("image/png")
     ) no-repeat;
     background-size: unset;
   }
