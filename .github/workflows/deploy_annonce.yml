@@ -27,6 +27,7 @@ jobs:
               git clone https://github.com/hamedor/annonce-landing.git annonce
             fi
             cd annonce
+            git pull
             npm install
             npm run build
             pm2 reload annonce || pm2 start npm --name annonce -- run preview
