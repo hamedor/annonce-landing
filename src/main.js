@@ -36,30 +36,55 @@ document.querySelector('.footer-arrow').addEventListener('click', (event) => {
   });
 });
 
-document.querySelectorAll('.slider-container').forEach((container) => {
-  const slider = container.querySelector('.slider');
-  const track = slider.querySelector('.slider-track');
-  const prevButton = container.querySelector('.slider-prev');
-  const nextButton = container.querySelector('.slider-next');
-  const items = track.querySelectorAll('.slider-item');
+function createSlider({
+                        container,
+                        itemsSelector,
+                        prevButtonSelector,
+                        nextButtonSelector,
+                        type = 'transform',
+                      }) {
+  const items = container.querySelectorAll(itemsSelector);
+  const prevButton = container.querySelector(prevButtonSelector);
+  const nextButton = container.querySelector(nextButtonSelector);
 
   let currentIndex = 0;
 
-  function updateSliderPosition() {
-    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+  function updateSlides() {
+    if (type === 'transform') {
+      const track = container.querySelector('.slider-track');
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    } else if (type === 'fade') {
+      items.forEach((item, index) => {
+        item.classList.toggle('active', index === currentIndex);
+      });
+    }
   }
 
-  nextButton.addEventListener('click', () => {
-    if (currentIndex < items.length - 1) {
-      currentIndex++;
-      updateSliderPosition();
-    }
+  prevButton.addEventListener('click', () => {
+    currentIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1;
+    updateSlides();
   });
 
-  prevButton.addEventListener('click', () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateSliderPosition();
-    }
+  nextButton.addEventListener('click', () => {
+    currentIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0;
+    updateSlides();
   });
+
+  updateSlides();
+}
+
+createSlider({
+  container: document.querySelector('.slider-container'),
+  itemsSelector: '.slider-item',
+  prevButtonSelector: '.slider-prev',
+  nextButtonSelector: '.slider-next',
+  type: 'transform',
+});
+
+createSlider({
+  container: document.querySelector('.background-slider'),
+  itemsSelector: '.background-slide',
+  prevButtonSelector: '.slider-prev',
+  nextButtonSelector: '.slider-next',
+  type: 'fade',
 });
