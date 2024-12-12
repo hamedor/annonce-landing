@@ -328,8 +328,8 @@ button:focus-visible {
 
 .hero-2 {
   background: #020305 image-set(
-          url('/src/assets/webp/hero-mobile.webp') type("image/webp"),
-          url('/src/assets/hero-mobile.png') type("image/png")
+          url('/src/assets/webp/fashion-show.webp') type("image/webp"),
+          url('/src/assets/fashion-show.png') type("image/png")
   ) no-repeat;
   background-size: cover;
 }
