@@ -899,6 +899,10 @@ img.slider-icon {
     padding: 10px;
   }
 
+  .fashion {
+    position: relative;
+  }
+
   .fashion-container {
     padding: 0 26px 132px 116px;
   }
