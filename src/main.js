@@ -73,18 +73,22 @@ function createSlider({
   updateSlides();
 }
 
-createSlider({
-  container: document.querySelector('.slider-container'),
-  itemsSelector: '.slider-item',
-  prevButtonSelector: '.slider-prev',
-  nextButtonSelector: '.slider-next',
-  type: 'transform',
+document.querySelectorAll('.slider-container').forEach((sliderContainer) => {
+  createSlider({
+    container: sliderContainer,
+    itemsSelector: '.slider-item',
+    prevButtonSelector: '.slider-prev',
+    nextButtonSelector: '.slider-next',
+    type: 'transform',
+  });
 });
 
-createSlider({
-  container: document.querySelector('.background-slider'),
-  itemsSelector: '.background-slide',
-  prevButtonSelector: '.slider-prev',
-  nextButtonSelector: '.slider-next',
-  type: 'fade',
+document.querySelectorAll('.background-slider').forEach((backgroundSlider) => {
+  createSlider({
+    container: backgroundSlider,
+    itemsSelector: '.background-slide',
+    prevButtonSelector: '.slider-prev',
+    nextButtonSelector: '.slider-next',
+    type: 'fade',
+  });
 });
