@@ -14,7 +14,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: './index.html',
-        second: './public/catalog.html',
+        catalog: './catalog.html',
       },
     },
   },
