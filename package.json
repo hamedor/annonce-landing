@@ -4,12 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "webp": "node convert-to-webp.js",
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run webp && vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^6.0.1",
-    "vite-plugin-imagemin": "^0.6.1"
+    "imagemin": "^9.0.0",
+    "imagemin-webp": "^8.0.0",
+    "vite": "^6.0.1"
   }
 }
