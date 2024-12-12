@@ -942,6 +942,24 @@ img.slider-icon {
     margin-top: -1px;
   }
 
+  /*.fashion-1 {*/
+  /*  background: #020305 image-set(*/
+  /*          url('/src/assets/webp/fashion-show-desktop.webp') type("image/webp"),*/
+  /*          url('/src/assets/fashion-show-desktop.png') type("image/png")*/
+  /*  ) center no-repeat;*/
+  /*  background-size: cover;*/
+  /*  margin-top: 24px;*/
+  /*}*/
+
+  /*.fashion-2 {*/
+  /*  background: #020305 image-set(*/
+  /*          url('/src/assets/webp/hero.webp') type("image/webp"),*/
+  /*          url('/src/assets/hero.png') type("image/png")*/
+  /*  ) center no-repeat;*/
+  /*  background-size: cover;*/
+  /*  margin-top: 24px;*/
+  /*}*/
+
   .fashion-container h2 {
     margin: 0 0 16px;
     font-size: 50px;
