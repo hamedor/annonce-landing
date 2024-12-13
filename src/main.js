@@ -92,3 +92,9 @@ document.querySelectorAll('.background-slider').forEach((backgroundSlider) => {
     type: 'fade',
   });
 });
+
+const lookAllButton = document.querySelector('#look-all-button')
+
+lookAllButton.addEventListener('click', () => {
+  window.open("catalog.html", "_blank");
+})
