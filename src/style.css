@@ -318,6 +318,10 @@ button:focus-visible {
   transition: opacity 0.5s ease-in-out;
 }
 
+.background-slide.no-transition {
+  transition: none;
+}
+
 .hero-1 {
   background: #020305 image-set(
           url('/src/assets/webp/hero-mobile.webp') type("image/webp"),

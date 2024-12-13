@@ -70,7 +70,11 @@ function createSlider({
     updateSlides();
   });
 
+  items.forEach((item) => item.classList.add('no-transition'));
   updateSlides();
+  setTimeout(() => {
+    items.forEach((item) => item.classList.remove('no-transition'));
+  }, 0);
 }
 
 document.querySelectorAll('.slider-container').forEach((sliderContainer) => {
