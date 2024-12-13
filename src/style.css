@@ -359,6 +359,8 @@ button:focus-visible {
 .badge {
   background: #000;
   text-align: center;
+  position: relative;
+  z-index: 5;
 }
 
 .slider-container {
@@ -491,35 +493,35 @@ img.slider-icon {
 }
 
 .fashion-bg {
-  background: url('/src/assets/fashion-show.png') center calc(-10px) no-repeat;
   background-size: cover;
   width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
+  margin-top: 24px;
 }
 
 
-/*.fashion-1 {*/
-/*  background: #020305 image-set(*/
-/*          url('/src/assets/webp/fashion-show.webp') type("image/webp"),*/
-/*          url('/src/assets/fashion-show.png') type("image/png")*/
-/*  ) center no-repeat;*/
-/*  background-size: cover;*/
-/*  margin-top: 24px;*/
-/*}*/
+.fashion-1 {
+  background: #020305 image-set(
+          url('/src/assets/webp/fashion-show.webp') type("image/webp"),
+          url('/src/assets/fashion-show.png') type("image/png")
+  ) center no-repeat;
+  background-size: cover;
 
-/*.fashion-2 {*/
-/*  background: #020305 image-set(*/
-/*          url('/src/assets/webp/hero.webp') type("image/webp"),*/
-/*          url('/src/assets/hero.png') type("image/png")*/
-/*  ) center no-repeat;*/
-/*  background-size: cover;*/
-/*  margin-top: 24px;*/
-/*}*/
+}
+
+.fashion-2 {
+  background: #020305 image-set(
+          url('/src/assets/webp/hero-mobile.webp') type("image/webp"),
+          url('/src/assets/hero-mobile.png') type("image/png")
+  ) center no-repeat;
+  background-size: cover;
+}
 
 
 .fashion-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-top: auto;
@@ -551,7 +553,7 @@ img.slider-icon {
   height: 427px;
   display: flex;
   flex-direction: column;
-  margin-top: -10px;
+  /*margin-top: -10px;*/
 }
 
 .footer {
@@ -924,41 +926,38 @@ img.slider-icon {
     padding: 10px;
   }
 
-  .fashion {
-    position: relative;
-  }
-
   .fashion-container {
     padding: 0 26px 132px 116px;
   }
 
+  .fashion {
+    height: 1050px;
+  }
+
   .fashion-bg {
-    background: #020305 image-set(
+
+    height: 100%;
+    margin-top: -1px;
+
+  }
+
+  .fashion-1 {
+    background:  image-set(
             url('/src/assets/webp/fashion-show-desktop.webp') type("image/webp"),
             url('/src/assets/fashion-show-desktop.png') type("image/png")
     ) center no-repeat;
     background-size: cover;
-    height: 1080px;
-    margin-top: -1px;
+    height: 1050px;
   }
 
-  /*.fashion-1 {*/
-  /*  background: #020305 image-set(*/
-  /*          url('/src/assets/webp/fashion-show-desktop.webp') type("image/webp"),*/
-  /*          url('/src/assets/fashion-show-desktop.png') type("image/png")*/
-  /*  ) center no-repeat;*/
-  /*  background-size: cover;*/
-  /*  margin-top: 24px;*/
-  /*}*/
-
-  /*.fashion-2 {*/
-  /*  background: #020305 image-set(*/
-  /*          url('/src/assets/webp/hero.webp') type("image/webp"),*/
-  /*          url('/src/assets/hero.png') type("image/png")*/
-  /*  ) center no-repeat;*/
-  /*  background-size: cover;*/
-  /*  margin-top: 24px;*/
-  /*}*/
+  .fashion-2 {
+    background: #020305 image-set(
+            url('/src/assets/webp/hero.webp') type("image/webp"),
+            url('/src/assets/hero.png') type("image/png")
+    ) center no-repeat;
+    background-size: cover;
+    height: 1050px;
+  }
 
   .fashion-container h2 {
     margin: 0 0 16px;
@@ -971,7 +970,7 @@ img.slider-icon {
 
   .gallery {
     flex-direction: row;
-    margin-top: -1px;
+    margin-top: -12px;
   }
 
   .gallery-bg {
