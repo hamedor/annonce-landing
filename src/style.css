@@ -147,18 +147,19 @@ h1 {
   flex-direction: column;
   position: fixed;
   top: 0;
-  left: -100%;
+  left: 0;
+  transform: translateX(-100%);
   width: 100vw;
   height: 100vh;
   background-color: #fff;
   color: #fff;
-  transition: left 0.5s ease;
+  transition: transform 0.5s ease;
   z-index: 20;
   box-sizing: border-box;
 }
 
 .sidebar.active {
-  left: 0;
+  transform: translateX(0);
 }
 
 .sidebar-close {
